@@ -57,10 +57,7 @@ public class ArticleDetailFragment extends Fragment implements
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
-    private ImageView mPhotoView;
     private Toolbar toolbar;
-
-    private View mFab;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -108,7 +105,7 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
-        mFab = mRootView.findViewById(R.id.share_fab);
+        View mFab = mRootView.findViewById(R.id.share_fab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -192,8 +189,6 @@ public class ArticleDetailFragment extends Fragment implements
                             public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
                                 Bitmap bitmap = imageContainer.getBitmap();
                                 if (bitmap != null) {
-//                                Palette p = Palette.generate(bitmap, 12);
-//                                mMutedColor = p.getDarkMutedColor(0xFF333333);
                                     mPhotoView.setImageBitmap(imageContainer.getBitmap());
                                 }
                             }
@@ -239,6 +234,5 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
-//        bindViews();
     }
 }
