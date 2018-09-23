@@ -1,4 +1,8 @@
 <resources>
+
+    <!-- list_item_article.xml -->
+    <dimen name="item_margin">8dp</dimen>
+
     <!-- detail -->
     <dimen name="detail_title_text_size">42sp</dimen>
     <dimen name="detail_body_text_size">20sp</dimen>

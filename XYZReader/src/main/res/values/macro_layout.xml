@@ -3,8 +3,32 @@
     <dimen name="list_side_margin">4dp</dimen>
     <dimen name="list_toolbar_side_margin">0dp</dimen>
     <integer name="list_column_count">2</integer>
+    <dimen name="list_collapsing_toolbar_height">128dp</dimen>
+    <dimen name="list_toolbar_elevation">4dp</dimen>
+    <dimen name="list_toolbar_image_margin">8dp</dimen>
+
+
 
     <!-- detail -->
+    <dimen name="detail_nested_scroll_margin">16dp</dimen>
+    <dimen name="detail_collapsing_toolbar_height">300dp</dimen>
+    <dimen name="detail_app_bar_elevation">4dp</dimen>
+
+    <integer name="detail_image_weight">1</integer>
+
+
+
+    <dimen name="detail_toolbar_inset_start">72dp</dimen>
+    <dimen name="detail_nested_scroll_cardview_bottom_padding">8dp</dimen>
+    <dimen name="detail_nested_scroll_cardview_bottom_corner_radius">4dp</dimen>
+    <dimen name="detail_nested_scroll_cardview_layout_margin">8dp</dimen>
+    <dimen name="detail_nested_scroll_cardview_elevation">8dp</dimen>
+
+    <dimen name="detail_article_body_margin">8dp</dimen>
+    <dimen name="detail_floating_button_margin">16dp</dimen>
+    <dimen name="detail_floating_button_elevation">8dp</dimen>
+
+
     <bool name="detail_is_card">false</bool>
     <dimen name="detail_photo_height">304dp</dimen>
     <dimen name="detail_card_top_margin">@dimen/detail_photo_height</dimen>
@@ -14,4 +38,5 @@
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_body_top_margin">16dp</dimen>
     <dimen name="detail_body_bottom_margin">88dp</dimen>
+
 </resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayoutView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        android:elevation="@dimen/detail_app_bar_elevation">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayoutView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/TextAppearanceAppBarDisplay"
+            app:expandedTitleGravity="bottom">
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            style="@style/ToolBarWithNavigationBack"
+            app:contentInsetStart="@dimen/detail_toolbar_inset_start"
+            android:elevation="@dimen/detail_app_bar_elevation"
+            android:background="@color/primaryColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/detail_image_weight"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/transition_photo"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:fillViewport="true"
+                android:layout_marginBottom="@dimen/detail_nested_scroll_margin"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentPaddingBottom="@dimen/detail_nested_scroll_cardview_bottom_padding"
+                    app:cardCornerRadius="@dimen/detail_nested_scroll_cardview_bottom_corner_radius"
+                    android:elevation="@dimen/detail_nested_scroll_cardview_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/article_byline"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            style="@style/TextComponent.ItemRow"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/article_body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:padding="@dimen/detail_article_body_margin"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/detail_floating_button_margin"
+        android:elevation="@dimen/detail_floating_button_elevation"
+        android:src="@drawable/ic_share"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@+id/cardview" />
+
+</android.support.design.widget.CoordinatorLayout>

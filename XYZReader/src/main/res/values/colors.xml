@@ -26,6 +26,8 @@
     <color name="secondaryDarkColor">#c49000</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="almost_black">#424242</color>
+
 
     <color name="colorPrimary">@color/primaryColor</color>
     <color name="colorPrimaryDark">@color/primaryDarkColor</color>
@@ -33,5 +35,8 @@
     <color name="ltgray">#ffe0e0e0</color>
 
     <color name="background">@color/ltgray</color>
+
+    <color name="item_subtitle_color">#6000</color>
+
 
 </resources>
