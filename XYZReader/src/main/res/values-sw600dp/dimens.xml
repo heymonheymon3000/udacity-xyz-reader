@@ -1,5 +1,4 @@
 <resources>
-
     <!-- list_item_article.xml -->
     <dimen name="item_margin">8dp</dimen>
 
